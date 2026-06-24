@@ -29,6 +29,9 @@ function toast(msg, type = '') {
 
 function nav(page) {
   S.page = page;
+  if (window.location.hash.slice(1) !== page) {
+    window.location.hash = page;
+  }
   closeAll();
   render();
 }
@@ -427,10 +430,24 @@ window.updateSidebarUser = updateSidebarUser;
 window.doLogout = doLogout;
 window.buildNav = buildNav;
 
+// Hash-based routing event listener
+window.addEventListener('hashchange', () => {
+  const page = window.location.hash.slice(1) || 'central';
+  const isValidPage = NAV_ITEMS.some(it => it.id === page);
+  if (isValidPage && S.page !== page) {
+    nav(page);
+  }
+});
+
 // Init execution
 renderAuth();
 if (session) {
   enterApp();
+  const initialPage = window.location.hash.slice(1) || 'central';
+  const isValidPage = NAV_ITEMS.some(it => it.id === initialPage);
+  if (isValidPage) {
+    nav(initialPage);
+  }
 } else {
   renderAuth();
 }
