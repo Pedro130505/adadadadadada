@@ -118,9 +118,11 @@ function pageMetas() {
             <td style="font-size:12.5px;color:var(--txt3)">${co ? co.name : '—'}</td>
             <td><span class="task-due ${late ? 'late' : isToday ? 'today' : 'ok'}">${late ? '⚠ ' : ''} ${fmtDate(t.dueDate)}</span></td>
             <td>${t.done ? `<span class="badge b-green">Concluída</span>` : late ? `<span class="badge b-red">Atrasada</span>` : isToday ? `<span class="badge b-amber">Hoje</span>` : `<span class="badge b-grey">Pendente</span>`}</td>
-            <td style="text-align:right;display:flex;gap:4px;justify-content:flex-end">
-              <button class="btn btn-ghost btn-xs" onclick="toggleTask('${t.id}')">${t.done ? 'Reabrir' : '✓ Feita'}</button>
-              <button class="btn btn-ghost btn-xs" style="color:var(--danger)" onclick="deleteTask('${t.id}')">${ic('x', 'ic ic-sm')}</button>
+            <td style="text-align:right;white-space:nowrap">
+              <div style="display:inline-flex;gap:4px;justify-content:flex-end;vertical-align:middle">
+                <button class="btn btn-ghost btn-xs" onclick="toggleTask('${t.id}')">${t.done ? 'Reabrir' : '✓ Feita'}</button>
+                <button class="btn btn-ghost btn-xs" style="color:var(--danger)" onclick="deleteTask('${t.id}')">${ic('x', 'ic ic-sm')}</button>
+              </div>
             </td>
           </tr>`;
         }).join('')}
