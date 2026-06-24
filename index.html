@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#024c76">
+  <title>Mercado em Conexão — CRM Interno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- ══════ AUTH SCREEN ══════ -->
+<div id="authScreen" class="visible">
+  <div class="auth-card" id="authCard"></div>
+</div>
+
+<div class="shell">
+  <div class="overlay" id="overlay" onclick="closeNav()"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-logo">
+      <a class="sb-logo-inner" href="#" onclick="nav('central');return false">
+        <!-- MeC Icon: rounded square with double-a mark, faithful to brand manual -->
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+          <rect width="42" height="42" rx="10" fill="#024c76"/>
+          <!-- Double-a (∞-like) mark in white, stylized per manual -->
+          <path d="M9 26 C9 22 11.5 18.5 15 18.5 C17 18.5 18.5 19.5 19.5 21 C20.5 19.5 22 18.5 24 18.5 C27.5 18.5 30 22 30 26 C30 28.5 28.5 30 26.5 30 C24.5 30 23 28.5 22.5 26.5 C22 28.5 20.5 30 18.5 30 C16.5 30 15 28.5 15 26.5 C14.5 25 13.5 23.5 12 23 C10.5 22.5 9 24 9 26Z" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M14 19 C13 16 14 13 16.5 12 C19 11 21 12.5 21 15" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M28 19 C28.5 16.5 27.5 13.5 25.5 12.5 C23 11.5 21 13 21 15" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <div class="sb-appname">
+          <span style="font-size:11px;font-weight:500;opacity:.75;letter-spacing:.02em">Mercado em</span>
+          <span style="font-size:15px;font-weight:800;letter-spacing:-.02em;display:block;margin-top:-2px">conexão</span>
+          <small>CRM Interno</small>
+        </div>
+      </a>
+    </div>
+    <nav class="sb-nav" id="sbNav"></nav>
+    <div class="sb-foot">
+      <div class="sb-user">
+        <div class="sb-av">JC</div>
+        <div class="sb-user-info">
+          <div class="sb-user-name">Juliana Costa</div>
+          <div class="sb-user-role">Coordenadora · Parcerias</div>
+        </div>
+        <button class="sb-theme" id="themeBtn" onclick="toggleTheme()" title="Alternar tema"></button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="content" id="content"></div>
+  </main>
+</div>
+
+<!-- SLIDE-OVER -->
+<div class="scrim" id="scrim" onclick="closeAll()"></div>
+<aside class="slideover" id="slideover"></aside>
+
+<!-- MODAL -->
+<div class="modal" id="modal"></div>
+
+<div id="toasts"></div>
+  <script src="app.js"></script>
+</body>
+</html>
