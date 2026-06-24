@@ -70,7 +70,7 @@
 ═══════════════════════════════════════════ */
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--txt);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body{font-family:"Lexend",system-ui,sans-serif;background:var(--bg);color:var(--txt);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
 button{font-family:inherit;cursor:pointer;border:0;background:0}
 input,select,textarea{font-family:inherit;font-size:14px}
 :focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
@@ -547,7 +547,7 @@ tbody tr:hover td{background:var(--surface2)}
   display:none;position:fixed;inset:0;z-index:200;
   background:#024c76;
   align-items:center;justify-content:center;
-  font-family:"DM Sans",system-ui,sans-serif;
+  font-family:"Lexend",system-ui,sans-serif;
   overflow:hidden
 }
 /* Decorative brand mark watermark in auth BG */
