@@ -59,7 +59,7 @@ function svgVertBar(title, bars, colorFn) {
   }).join('');
   return `<div class="card" style="padding:18px 20px">
     <div class="card-title" style="margin-bottom:14px">${title}</div>
-    <svg width="100%" viewBox="0 0 ${pw} ${ph + 28}" style="overflow:visible">
+    <svg width="100%" viewBox="0 0 ${pw} ${ph + 28}" style="max-width:${pw}px;height:auto;display:block;overflow:visible">
       <line x1="0" y1="${ph}" x2="${pw}" y2="${ph}" stroke="var(--border)" stroke-width="1"/>
       ${rects}
     </svg>
