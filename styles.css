@@ -8,6 +8,7 @@
   --border:      #e4e7ec;
   --border2:     #d0d5dd;
   --navy:        #024c76;
+  --sidebar-bg:  #024c76;
   --navy-mid:    #0a6391;
   --blue:        #57a0bc;
   --blue-light:  #e8f3f8;
@@ -46,6 +47,7 @@
   --border:     #30363d;
   --border2:    #484f58;
   --navy:       #79c0ff;
+  --sidebar-bg: #0b131f;
   --navy-mid:   #58a6ff;
   --blue:       #79c0ff;
   --blue-light: #1c2733;
@@ -87,7 +89,7 @@ input,select,textarea{font-family:inherit;font-size:14px}
 ═══════════════════════════════════════════ */
 .shell{display:flex;height:100vh;overflow:hidden}
 .sidebar{
-  width:var(--sb-w);flex-shrink:0;background:var(--navy);color:#fff;
+  width:var(--sb-w);flex-shrink:0;background:var(--sidebar-bg);color:#fff;
   display:flex;flex-direction:column;position:relative;z-index:40;
   background-image:
     radial-gradient(ellipse at 10% 90%,rgba(87,160,188,.3) 0,transparent 50%),
